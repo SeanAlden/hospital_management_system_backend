@@ -101,11 +101,6 @@ router.post("/medicines", medicineController.createMedicine);
 router.put("/medicines/:id", medicineController.updateMedicine);
 router.delete("/medicines/:id", medicineController.deleteMedicine);
 
-/* Purchases */
-// router.post("/purchases", purchaseController.createPurchase);
-// router.get("/purchases", purchaseController.getPurchases);
-// router.get("/purchases/:id", purchaseController.getPurchaseById);
-
 // Purchases
 router.post("/purchases", purchaseController.createPurchase);
 router.get("/purchases", purchaseController.getPurchases);
@@ -118,10 +113,7 @@ router.get("/medicine_stocks", medicineStockController.getStocks);
 router.get("/medicine_stocks/:id", medicineStockController.getStockById);
 
 /* Entry (move from purchase -> stock) */
-// router.post("/entries", entryController.createEntry);
-// router.get("/entries", (req, res) => { /* optional list entries */ });
-
-router.post("/entries", entryController.createEntry);       // already present
+router.post("/entries", entryController.createEntry);      
 router.get("/entries", entryController.listEntries);
 router.get("/entries/:id", entryController.getEntryById);
 router.put("/entries/:id", entryController.updateEntry);
