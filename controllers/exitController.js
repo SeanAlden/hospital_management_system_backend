@@ -1,4 +1,3 @@
-// controllers/exitController.js
 const db = require("../config/db");
 
 // helper promisified query on connection

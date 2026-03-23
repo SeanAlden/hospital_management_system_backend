@@ -1,4 +1,3 @@
-// controllers/purchaseController.js
 const db = require("../config/db");
 
 exports.createPurchase = (req, res) => {

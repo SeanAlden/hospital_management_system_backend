@@ -1,4 +1,3 @@
-// controllers/medicineStockController.js
 const db = require("../config/db");
 
 // list stocks
@@ -15,7 +14,6 @@ const db = require("../config/db");
 //   });
 // };
 
-// controllers/medicineStockController.js
 exports.getStocks = (req, res) => {
   const { medicine_id } = req.query; // ambil query param
 

@@ -85,7 +85,6 @@
 //   return new Promise((resolve) => conn.rollback(() => resolve()));
 // }
 
-// controllers/entryController.js
 const db = require("../config/db");
 
 /**

@@ -1,4 +1,3 @@
-// controllers/staff-controller.js
 const db = require("../config/db");
 
 // Create staff
