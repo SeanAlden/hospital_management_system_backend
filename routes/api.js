@@ -21,6 +21,11 @@ const exitController = require("../controllers/exitController");
 const userController = require("../controllers/userController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
+router.get("/ping", (req, res) => {
+    console.log("PING HIT")
+    return res.json({ ok: true })
+})
+
 // ROUTES UNTUK PATIENT
 router.post('/add_user', patientController.addPatient)
 router.get('/patients', patientController.getAllPatients)
