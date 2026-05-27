@@ -19,6 +19,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
+    "mysql2": "^3.22.4",
     "nodemon": "^3.1.10",
     "serverless-http": "^4.0.0"
   }
