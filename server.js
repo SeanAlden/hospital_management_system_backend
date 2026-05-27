@@ -1,29 +1,37 @@
-// server.js
-const express = require('express')
-const cors = require('cors')
-const path = require('path')
-const apiRoutes = require('./routes/api')
+// // server.js
+// const express = require('express')
+// const cors = require('cors')
+// const path = require('path')
+// const apiRoutes = require('./routes/api')
 
-// Import controller
-const patientController = require('./controllers/patient-controller')
+// // Import controller
+// const patientController = require('./controllers/patient-controller')
 
-const app = express()
-const port = 5000
+// const app = express()
+// const port = 5000
 
-app.use(express.static(path.join(__dirname, "public")))
-app.use(cors())
-app.use(express.json())
+// app.use(express.static(path.join(__dirname, "public")))
+// app.use(cors())
+// app.use(express.json())
 
-app.get("/", (_, res) => {
-    res.json({ message: "Hello World" })
-})
+// app.get("/", (_, res) => {
+//     res.json({ message: "Hello World" })
+// })
 
-// Semua route API
-app.use('/api', apiRoutes)
+// // Semua route API
+// app.use('/api', apiRoutes)
 
-// const supplierRoutes = require('./routes/supplier-routes');
-// app.use('/api/suppliers', supplierRoutes);
+// // const supplierRoutes = require('./routes/supplier-routes');
+// // app.use('/api/suppliers', supplierRoutes);
 
+
+// app.listen(port, () => {
+//     console.log(`Server running on http://localhost:${port}`)
+// })
+
+const app = require('./app')
+
+const port = process.env.PORT || 5000
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`)

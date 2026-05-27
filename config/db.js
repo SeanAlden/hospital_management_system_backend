@@ -20,14 +20,36 @@
 // module.exports = db
 
 // config/db.js
+// const mysql = require('mysql');
+
+// const db = mysql.createPool({
+//   host: "bcffbnujzhru7q2etmje-mysql.services.clever-cloud.com",
+//   user: "u1fqcebykhjk5v08",
+//   password: "cJHIUdg75FXnZ5wNubU4",
+//   database: "bcffbnujzhru7q2etmje",
+//   connectionLimit: 10 // jumlah maksimal koneksi
+// });
+
+// db.getConnection((err, connection) => {
+//   if (err) {
+//     console.error("❌ Database connection failed:", err.message);
+//   } else {
+//     console.log("✅ Connected to MySQL pool");
+//     connection.release(); // lepas setelah tes koneksi
+//   }
+// });
+
+// module.exports = db;
+
 const mysql = require('mysql');
 
 const db = mysql.createPool({
-  host: "bcffbnujzhru7q2etmje-mysql.services.clever-cloud.com",
-  user: "u1fqcebykhjk5v08",
-  password: "cJHIUdg75FXnZ5wNubU4",
-  database: "bcffbnujzhru7q2etmje",
-  connectionLimit: 10 // jumlah maksimal koneksi
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  connectionLimit: 10
 });
 
 db.getConnection((err, connection) => {
@@ -35,7 +57,7 @@ db.getConnection((err, connection) => {
     console.error("❌ Database connection failed:", err.message);
   } else {
     console.log("✅ Connected to MySQL pool");
-    connection.release(); // lepas setelah tes koneksi
+    connection.release();
   }
 });
 
