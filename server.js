@@ -29,6 +29,8 @@
 //     console.log(`Server running on http://localhost:${port}`)
 // })
 
+require('dotenv').config()
+
 const app = require('./app')
 
 const port = process.env.PORT || 5000
