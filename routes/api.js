@@ -127,8 +127,8 @@ router.put("/exits/:id", exitController.updateExit);
 router.delete("/exits/:id", exitController.deleteExit);
 
 /* Exit (remove from stock) */
-router.post("/exits", exitController.createExit);
-router.get("/exits", (req, res) => { /* optional list exits */ });
+// router.post("/exits", exitController.createExit);
+// router.get("/exits", (req, res) => { /* optional list exits */ });
 
 // Auth
 router.post("/auth/register", userController.register);
